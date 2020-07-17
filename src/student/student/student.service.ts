@@ -31,6 +31,10 @@ export class StudentService {
         return newCustomer.save();
     }
 
+    /**
+     * 
+     * @param studentID an id passed from the controller
+     */
     async getStudent(studentID): Promise<student> {
         const _student = await this.studentRepository.findById(studentID).exec();
         return _student;
