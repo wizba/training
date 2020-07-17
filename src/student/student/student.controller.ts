@@ -6,8 +6,8 @@ export class StudentController {
  
   constructor(private studentService: StudentService) {}
   @Post()
-  postStudent(@Body() createCustomerDTO) {
-    console.log(createCustomerDTO);
-    return this.studentService.addCustomer(createCustomerDTO);
+  postStudent(@Body() studentDto) {
+    console.log(studentDto);
+    return this.studentService.createStudent(studentDto);
   }
 }
